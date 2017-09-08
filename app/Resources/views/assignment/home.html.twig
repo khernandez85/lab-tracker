@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+    <h1>Opdrachten</h1>
+    {% for opdracht in opdrachten %}
+        <li><a href="{{ path('show_assignment', {'id': opdracht.id}) }}">{{ opdracht.name }}</a></li>
+    {% endfor %}
+{% endblock %}

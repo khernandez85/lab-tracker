@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ assignment.name }}{% endblock %}
+{% block body %}
+    <h1>{{ assignment.name }}</h1>
+    {% for st in students %}
+        <li>{{ st.user.name }} <button style="background-color: {{ st.status.color }}">{{ st.status.name }}</button>
+        {{ st.observation }}</li>
+    {% endfor %}
+{% endblock %}
